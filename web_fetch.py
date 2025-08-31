@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import io
 import re
-import sys
 from typing import Literal, Optional, Dict, Any
 from main import mcp
 import requests
@@ -30,7 +29,7 @@ UA = (
 )
 
 
-# @mcp.tool
+@mcp.tool
 def webfetch(
     url: str,
     format: Literal["text", "markdown", "html"],
@@ -166,11 +165,3 @@ def _html_to_markdown(html: str) -> str:
 def _normalize_ws(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     return s.strip()
-
-
-print(
-    webfetch(
-        "https://www.startpage.com/sp/search?query=coding+benchmarks&cat=web&pl=opensearch",
-        "text",
-    )
-)

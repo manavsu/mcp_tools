@@ -7,7 +7,6 @@ cd to the `examples/snippets/clients` directory and run:
 
 from fastmcp import FastMCP
 
-# Create an MCP server
 mcp = FastMCP("Demo")
 
 

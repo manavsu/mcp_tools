@@ -1,8 +1,10 @@
 import os
 import glob
 from typing import List, Optional, Tuple
+from main import mcp
 
 
+@mcp.tool
 def glob_files(
     pattern: str, path: Optional[str] = None, limit: int = 100
 ) -> Tuple[List[str], bool]:
